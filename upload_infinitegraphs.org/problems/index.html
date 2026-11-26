@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open problems · Infinite Graphs</title>
+<meta name="description" content="Progress on the open problems of the book Infinite Graphs (Graduate Texts in Mathematics, Springer) since August 2026.">
+<style>
+  :root { --bg:#fdfdfb; --text:#1d1d1f; --muted:#5f5f66; --rule:#d9d9de; --link:#1f4e9c;
+          --open:#8a8a92; --partial:#9a6a00; --solved:#2f7d4f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#17171a; --text:#e8e8ea; --muted:#a3a3ab; --rule:#3a3a40; --link:#8fb4ff;
+            --open:#8a8a92; --partial:#e0b04a; --solved:#6fcf97; }
+  }
+  html { background:var(--bg); }
+  body { margin:0; padding:3rem 16px 4rem; background:var(--bg); color:var(--text);
+         font-family:Georgia, "Times New Roman", serif; font-size:1.1rem; line-height:1.6; }
+  main, footer { max-width:40rem; margin:0 auto; }
+  .back { margin:0 0 1.2rem; font-size:1rem; }
+  h1 { font-size:2.2rem; font-weight:normal; margin:0 0 .6rem; }
+  h2 { font-size:1.25rem; font-weight:normal; margin:2.5rem 0 .6rem; padding-bottom:.3rem; border-bottom:1px solid var(--rule); }
+  h3 { font-size:1rem; font-weight:normal; font-style:italic; color:var(--muted); margin:1.8rem 0 .3rem; }
+  a { color:var(--link); }
+  .muted { color:var(--muted); }
+  ul.probs, ul.recent, ul.hist { list-style:none; margin:0; padding:0; }
+  ul.probs > li { padding:.55rem 0; border-bottom:1px solid var(--rule); scroll-margin-top:1rem; }
+  ul.probs > li:target { background:color-mix(in srgb, var(--link) 8%, transparent); }
+  .uhead, .usum, .uref { margin:0; }
+  .phead, .ptopic { display:block; }
+  .phead { display:flex; gap:.6rem; align-items:baseline; }
+  .phead .st { margin-left:auto; }
+  .ptopic { font-size:1rem; }
+  summary { cursor:pointer; list-style:none; }
+  summary::-webkit-details-marker { display:none; }
+  details.sec > summary h2::before, details.upd > summary::before, details.prob > summary .phead::before
+    { content:"▸"; display:inline-block; width:1em; color:var(--muted); transition:transform .15s; }
+  details.sec[open] > summary h2::before, details.upd[open] > summary::before, details.prob[open] > summary .phead::before
+    { transform:rotate(90deg); }
+  li.plain .phead, li.plain .ptopic, details.prob .ptopic { padding-left:1em; }
+  li.plain .phead { padding-left:1em; }
+  .count { font-size:.85rem; color:var(--muted); margin-left:.5rem; }
+  details.prob .count { display:block; padding-left:1em; margin:0; }
+  h2 .count { font-size:.9rem; }
+  details.sec > summary h2 { display:block; }
+  details.upd > .usum, details.upd > .uref { padding-left:1em; }
+  .st { font-size:.85rem; white-space:nowrap; }
+  .st-open { color:var(--open); } .st-partial { color:var(--partial); }
+  .st-solved-yes, .st-solved-no { color:var(--solved); }
+  ul.recent > li { padding:.6rem 0; border-bottom:1px solid var(--rule); }
+  ul.hist { margin:.4rem 0 0 1rem; padding-left:.8rem; border-left:2px solid var(--rule); font-size:.95rem; }
+  .date, .src { color:var(--muted); }
+  .uref { font-size:.92rem; }
+  .demo { border:1px dashed var(--partial); padding:.4rem .7rem; font-size:.95rem; }
+  footer { margin-top:3rem; color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="back"><a href="../">Infinite Graphs</a></p>
+  
+  <h1>Open problems</h1>
+  <p>The book states its 35 numbered problems and 3 named conjectures as of August 2026.
+  This page records progress on them since then. Each is listed with its number in the book, the section where it
+  is discussed and a short description of its topic. The precise statements are in the book.</p>
+
+  <details class="sec"><summary><h2>Recent progress <span class="count">1 update, newest first</span></h2></summary><ul class="recent"><li><details class="upd"><summary><span class="date">24 November 2026</span> · Problem 6 <span class="muted">(well-balanced orientations)</span> · <span class="st st-solved-yes">Solved</span></summary><p class="usum">Assem, Mahmoud and Miraftab prove that every multigraph, of any cardinality, has a well-balanced orientation. In particular, every 2k-edge-connected graph has a k-arc-connected orientation, as Nash-Williams had announced in 1960.</p><p class="uref"><a href="https://arxiv.org/abs/2611.33366">A. Assem, M. A. Mahmoud and B. Miraftab, Nash-Williams&#x27; orientation theorems for infinite graphs, arXiv:2611.33366 (2026)</a> <span class="src">(preprint)</span></p><p class="uref"> <a href="#problem-6">All updates on Problem 6</a></p></details></li></ul></details>
+
+  <details class="sec"><summary><h2>All problems <span class="count">35 problems and 3 conjectures, in the order of the book</span></h2></summary>
+<h3>Chapter 1 · Origins</h3><ul class="probs">
+<li id="problem-1" class="plain"><span class="phead"><b>Problem 1</b><span class="st st-open">Open</span></span><span class="ptopic">the chromatic number of the plane (Nelson) · <span class="muted">Section 1.5</span></span></li>
+</ul>
+<h3>Chapter 3 · Rays and Ends</h3><ul class="probs">
+<li id="problem-2" class="plain"><span class="phead"><b>Problem 2</b><span class="st st-open">Open</span></span><span class="ptopic">typical configurations in ends of degree ℵ₁ · <span class="muted">Section 3.3</span></span></li>
+</ul>
+<h3>Chapter 5 · Connectivity</h3><ul class="probs">
+<li id="problem-3" class="plain"><span class="phead"><b>Problem 3</b><span class="st st-open">Open</span></span><span class="ptopic">unavoidable substructures of κ-connected graphs · <span class="muted">Section 5.1</span></span></li>
+<li id="problem-4" class="plain"><span class="phead"><b>Problem 4</b><span class="st st-open">Open</span></span><span class="ptopic">K₅ subdivisions in 6-connected non-planar graphs (Thomassen) · <span class="muted">Section 5.1</span></span></li>
+</ul>
+<h3>Chapter 6 · Edge Connectivity and Graph Decompositions</h3><ul class="probs">
+<li id="problem-5" class="plain"><span class="phead"><b>Problem 5</b><span class="st st-open">Open</span></span><span class="ptopic">cycle double covers of infinite graphs · <span class="muted">Section 6.2</span></span></li>
+<li id="problem-6"><details class="prob"><summary><span class="phead"><b>Problem 6</b> · The strong orientation problem<span class="st st-solved-yes">Solved</span></span><span class="ptopic">well-balanced orientations · <span class="muted">Section 6.2</span></span><span class="count">1 update</span></summary><ul class="hist"><li><p class="uhead"><span class="date">24 November 2026</span> · <span class="st st-solved-yes">Solved</span></p><p class="usum">Assem, Mahmoud and Miraftab prove that every multigraph, of any cardinality, has a well-balanced orientation. In particular, every 2k-edge-connected graph has a k-arc-connected orientation, as Nash-Williams had announced in 1960.</p><p class="uref"><a href="https://arxiv.org/abs/2611.33366">A. Assem, M. A. Mahmoud and B. Miraftab, Nash-Williams&#x27; orientation theorems for infinite graphs, arXiv:2611.33366 (2026)</a> <span class="src">(preprint)</span></p></li></ul></details></li>
+<li id="problem-7" class="plain"><span class="phead"><b>Problem 7</b><span class="st st-open">Open</span></span><span class="ptopic">unavoidable substructures for edge-connectivity λ · <span class="muted">Section 6.3</span></span></li>
+</ul>
+<h3>Chapter 7 · Chromatic Number</h3><ul class="probs">
+<li id="problem-8" class="plain"><span class="phead"><b>Problem 8</b><span class="st st-open">Open</span></span><span class="ptopic">common subgraphs of ℵ₁-chromatic graphs (Erdős) · <span class="muted">Section 7.2</span></span></li>
+<li id="problem-9" class="plain"><span class="phead"><b>Problem 9</b><span class="st st-open">Open</span></span><span class="ptopic">infinitely connected subgraphs of uncountably chromatic graphs (Erdős &amp; Hajnal) · <span class="muted">Section 7.6</span></span></li>
+<li id="problem-10" class="plain"><span class="phead"><b>Problem 10</b><span class="st st-open">Open</span></span><span class="ptopic">graphs of countable chromatic number by forbidden subgraphs · <span class="muted">Section 7.7</span></span></li>
+<li id="problem-11" class="plain"><span class="phead"><b>Problem 11</b><span class="st st-open">Open</span></span><span class="ptopic">ℵ₁-chromatic subgraphs of ℵ₂-chromatic graphs (Galvin) · <span class="muted">Section 7.7</span></span></li>
+</ul>
+<h3>Chapter 8 · Normal Spanning Trees</h3><ul class="probs">
+<li id="problem-12" class="plain"><span class="phead"><b>Problem 12</b><span class="st st-open">Open</span></span><span class="ptopic">graphs representable as T-graphs (Brochet &amp; Diestel) · <span class="muted">Section 8.2</span></span></li>
+<li id="prob-wqo-ctble" class="plain"><span class="phead"><b>Conjecture 8.4.7</b><span class="st st-open">Open</span></span><span class="ptopic">countable graphs are well-quasi-ordered by minors (Thomas) · <span class="muted">Section 8.4</span></span></li>
+<li id="problem-13" class="plain"><span class="phead"><b>Problem 13</b><span class="st st-open">Open</span></span><span class="ptopic">countable graphs as proper minors of themselves (Seymour) · <span class="muted">Section 8.4</span></span></li>
+</ul>
+<h3>Chapter 9 · Tree-Decompositions</h3><ul class="probs">
+<li id="problem-14" class="plain"><span class="phead"><b>Problem 14</b><span class="st st-open">Open</span></span><span class="ptopic">chordal graphs with a tree-decomposition into cliques · <span class="muted">Section 9.2</span></span></li>
+<li id="problem-15" class="plain"><span class="phead"><b>Problem 15</b><span class="st st-open">Open</span></span><span class="ptopic">forbidden minors for tree-width κ · <span class="muted">Section 9.5</span></span></li>
+</ul>
+<h3>Chapter 10 · End-Faithful Spanning Trees</h3><ul class="probs">
+<li id="problem-16" class="plain"><span class="phead"><b>Problem 16</b><span class="st st-open">Open</span></span><span class="ptopic">end-faithful spanning trees from one-ended subgraphs (Polat, Diestel) · <span class="muted">Section 10.1</span></span></li>
+<li id="problem-17" class="plain"><span class="phead"><b>Problem 17</b><span class="st st-open">Open</span></span><span class="ptopic">end-faithful spanning trees when all ends have countable degree · <span class="muted">Section 10.1</span></span></li>
+<li id="problem-18" class="plain"><span class="phead"><b>Problem 18</b><span class="st st-open">Open</span></span><span class="ptopic">rayless spanning trees when every end is dominated (Širáň) · <span class="muted">Section 10.2</span></span></li>
+<li id="problem-19" class="plain"><span class="phead"><b>Problem 19</b><span class="st st-open">Open</span></span><span class="ptopic">spanning trees faithful to the finitely dominated ends (Carmesin) · <span class="muted">Section 10.3</span></span></li>
+</ul>
+<h3>Chapter 11 · The Ubiquity Problem</h3><ul class="probs">
+<li id="conj-ubiquity" class="plain"><span class="phead"><b>The Ubiquity Conjecture</b><span class="st st-open">Open</span></span><span class="ptopic">minor-ubiquity of locally finite graphs (Andreae) · <span class="muted">Section 11.1</span></span></li>
+<li id="problem-20" class="plain"><span class="phead"><b>Problem 20</b><span class="st st-open">Open</span></span><span class="ptopic">edge-ubiquity of two double rays joined by an edge (Bowler, Carmesin &amp; Pott) · <span class="muted">Section 11.3</span></span></li>
+<li id="problem-21" class="plain"><span class="phead"><b>Problem 21</b><span class="st st-open">Open</span></span><span class="ptopic">edge-disjoint directed double rays (Bowler, Carmesin &amp; Pott) · <span class="muted">Section 11.3</span></span></li>
+<li id="problem-22" class="plain"><span class="phead"><b>Problem 22</b><span class="st st-open">Open</span></span><span class="ptopic">disjoint directed double rays (Gut, Krill &amp; Reich) · <span class="muted">Section 11.3</span></span></li>
+</ul>
+<h3>Chapter 12 · Topological Cycles in Infinite Graphs</h3><ul class="probs">
+<li id="problem-23" class="plain"><span class="phead"><b>Problem 23</b><span class="st st-open">Open</span></span><span class="ptopic">Hamilton circles in squares of countable graphs (Georgakopoulos) · <span class="muted">Section 12.5</span></span></li>
+<li id="problem-24" class="plain"><span class="phead"><b>Problem 24</b><span class="st st-open">Open</span></span><span class="ptopic">Hamilton circles in 4-connected planar graphs (Bruhn) · <span class="muted">Section 12.5</span></span></li>
+<li id="problem-25" class="plain"><span class="phead"><b>Problem 25</b><span class="st st-open">Open</span></span><span class="ptopic">Hamilton circles in line graphs (Georgakopoulos) · <span class="muted">Section 12.5</span></span></li>
+<li id="problem-26" class="plain"><span class="phead"><b>Problem 26</b><span class="st st-open">Open</span></span><span class="ptopic">a degree condition for Hamilton circles (Diestel) · <span class="muted">Section 12.5</span></span></li>
+<li id="problem-27" class="plain"><span class="phead"><b>Problem 27</b><span class="st st-open">Open</span></span><span class="ptopic">topological spanning trees (Diestel &amp; Kühn) · <span class="muted">Section 12.6</span></span></li>
+</ul>
+<h3>Chapter 13 · End Spaces and the Topology of |G|</h3><ul class="probs">
+<li id="problem-28" class="plain"><span class="phead"><b>Problem 28</b><span class="st st-open">Open</span></span><span class="ptopic">metrisability of the finitely dominated ends · <span class="muted">Section 13.3</span></span></li>
+</ul>
+<h3>Chapter 14 · Universal Graphs</h3><ul class="probs">
+<li id="problem-29" class="plain"><span class="phead"><b>Problem 29</b><span class="st st-open">Open</span></span><span class="ptopic">universal graphs omitting infinitely many cycle lengths (Cherlin &amp; Tallgren) · <span class="muted">Section 14.3</span></span></li>
+<li id="problem-30" class="plain"><span class="phead"><b>Problem 30</b><span class="st st-open">Open</span></span><span class="ptopic">universal X-free graphs · <span class="muted">Section 14.3</span></span></li>
+<li id="problem-31" class="plain"><span class="phead"><b>Problem 31</b><span class="st st-open">Open</span></span><span class="ptopic">bounded-degree hosts for planar graphs of maximum degree 3 (Huynh, Mohar, Šámal, Thomassen &amp; Wood) · <span class="muted">Section 14.5</span></span></li>
+<li id="problem-32" class="plain"><span class="phead"><b>Problem 32</b><span class="st st-open">Open</span></span><span class="ptopic">universal planar graphs for minors with finite branch sets (Diestel &amp; Kühn) · <span class="muted">Section 14.7</span></span></li>
+<li id="problem-33" class="plain"><span class="phead"><b>Problem 33</b><span class="st st-open">Open</span></span><span class="ptopic">minor-universal X-minor-free graphs (Diestel &amp; Kühn) · <span class="muted">Section 14.7</span></span></li>
+<li id="problem-34" class="plain"><span class="phead"><b>Problem 34</b><span class="st st-open">Open</span></span><span class="ptopic">minor-universal graphs when no component has every finite minor (Georgakopoulos) · <span class="muted">Section 14.7</span></span></li>
+<li id="problem-35" class="plain"><span class="phead"><b>Problem 35</b><span class="st st-open">Open</span></span><span class="ptopic">vertex-transitive graphs invariant under local complementation (Georgakopoulos) · <span class="muted">Section 14.7</span></span></li>
+</ul>
+<h3>Chapter 16 · Unfriendly Partitions</h3><ul class="probs">
+<li id="conj-unfriendly" class="plain"><span class="phead"><b>The Unfriendly Partition Conjecture</b><span class="st st-open">Open</span></span><span class="ptopic">unfriendly partitions of countable graphs · <span class="muted">1.4 and Chapter 16</span></span></li>
+</ul>
+  </details>
+
+  <h2>Contact</h2>
+  <p>News of progress on the problems is welcome at
+  <a href="mailto:maxpitz@infinitegraphs.org">maxpitz@infinitegraphs.org</a>.</p>
+</main>
+<script>
+// a link to an entry inside a folded section, e.g. #problem-17, unfolds it (and its history)
+function unfold() { var t = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (!t) return; for (var e = t; e; e = e.parentElement) if (e.tagName === 'DETAILS') e.open = true;
+  var d = t.querySelector('details'); if (d) d.open = true; t.scrollIntoView(); }
+addEventListener('hashchange', unfold); unfold();
+</script>
+<footer>Last updated 26 November 2026 · <a href="../legal.html">Imprint and Privacy Statement</a></footer>
+</body>
+</html>
